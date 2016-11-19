@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+  </head>
+  <body>
+    <style>
+    .box.b1{
+      border:1px solid red;
+      position:relative;
+      box-sizing:border-box;
+      min-height:140px;
+      padding:50px 0;
+    }
+
+    .box.b1>.msg{
+      /*max-width:200px;*/
+      text-align: center;
+      vertical-align: middle;
+      line-height:1.5;
+      border:1px solid pink;
+      margin:0 auto;
+    }
+    .box.b2{
+      position:relative;
+      border:2px solid pink;
+      padding:0 15px;
+      min-height:140px;
+    }
+    .box.b2>.msg{
+      min-height:inherit;
+      position: inherit;
+    }
+    .box.b2>.msg>.text{
+      position:absolute;
+      top:0;right:0;left:0;bottom:0;
+      text-align:center;margin:auto;
+      border:1px solid pink;
+      display:table;width:100%;
+    }
+    </style>
+    <div class="box b1">
+      <div class="msg">hello marylin hello marylin hello marylin hello marylin</div>
+    </div>
+    <div class="box b1">
+      <div class="msg">hello marylin hello marylin</div>
+    </div>
+
+    <div class="box b2">
+      <div class="msg">
+        <div class="text">hello marylin hello marylin hello marylin hello marylin</div>
+      </div>
+    </div>
+    <div class="box b2">
+      <div class="msg">
+        <div class="text">hello marylin hello marylin</div>
+      </div>
+    </div>
+
+  </body>
+</html>
